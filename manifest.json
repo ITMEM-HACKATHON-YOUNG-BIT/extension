@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Grant Helper",
+  "version": "0.0.2",
+  "description": "Цифровая помощь в подаче на грант!",
+  "icons": {
+    "16": "mb.png",
+    "48": "mb.png",
+    "128": "mb.png"
+  },
+  "action": {
+    "default_title": "Проблемы с подачей заявку на грант?",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://grants.myrosmol.ru/*",
+        "https://grants.myrosmol.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "popup.css",
+        "bootstrap.min.css"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+    "cookies",
+    "tabs",
+    "<all_urls>",
+    "*",
+    "http://*",
+    "https://*",
+    "audioCapture",
+    "tabCapture",
+    "activeTab",
+    "microphone",
+    "webNavigation"
+  ]
+}

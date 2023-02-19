@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <style>
+        .messenger {
+            width: 400px;
+            height: 600px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #F2F2F2;
+            overflow-y: scroll;
+
+        }
+
+        .message-container {
+            margin-bottom: 10px;
+        }
+
+        .sender {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .message {
+            font-size: 13px;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .form-container {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .message-form {
+            width: 100%;
+            border: 1px solid #DADADA;
+            padding: 8px;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        .send-button-tg {
+            background-color: #00AEEF;
+            border: 1px solid #DADADA;
+            border-radius: 3px;
+        . color: #FFFFFF;
+            font-size: 14px;
+            padding: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        input,
+        textarea,
+        button,
+        select,
+        a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        a:focus,
+        a:visited,
+        a:active {
+            outline: none;
+        }
+
+
+    </style>
+    <link href="bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+
+<div class="main" id="main" >
+    <div class="messenger" id="register_telegram">
+        <div class="form-container">
+            <iframe name="dummyface" id="dummyface" style="display: none;"></iframe>
+            <form action="" target="dummyface">
+                <h1 class="h3 mb-3 fw-normal"> Введите свой никнейм</h1>
+                <br><br><br><br><br>
+                <div class="form-floating">
+                    <input type="text" class="message-form form-control" id="id_tg_user"/>
+                    <label> username </label>
+                </div>
+                <input class="send-button-tg w-100 btn btn-lg btn-primary" type="submit" id="id_button_exec"
+                       value="Отправить"/>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/popup.js"></script>
+<script src="js/microphone.js"></script>
+</body>
+</html>

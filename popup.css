@@ -1,0 +1,75 @@
+[data-tooltip] {
+    position: relative; /* Относительное позиционирование */
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 300px; /* Ширина подсказки */
+    left: 0;
+    top: 0; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+    z-index: 9;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+}
+
+.messenger {
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    overflow-y: scroll;
+
+}
+
+.message-container {
+    margin-bottom: 10px;
+}
+
+.sender {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message {
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.form-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.message-form {
+    width: 100%;
+    border: 1px solid #DADADA;
+    padding: 8px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.send-button-tg {
+    background-color: #00AEEF;
+    border: 1px solid #DADADA;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
